@@ -77,15 +77,6 @@ Retrofit no forma parte de este proyecto. Firebase se comunica mediante sus SDK 
 
 Se pueden aprender por partes; no hace falta reescribirlos todos para poder mantener la app.
 
-## Cómo cambiar la app sin alterar lo demás
-
-1. Cambiar una pantalla cada vez y conservar sus parámetros, callbacks y textos visibles.
-2. Mantener las reglas de negocio en `Schedule` o en el repositorio, no duplicarlas en una pantalla.
-3. Para un cambio de apariencia, modificar primero solo los componentes Compose correspondientes y comparar la pantalla antes/después.
-4. Para un cambio de almacenamiento, respaldar datos y diseñar la migración antes de editar las entidades Room o el formato Firebase.
-5. Probar tanto el modo de práctica como una cuenta Firebase: no comparten el mismo almacenamiento.
-6. Probar alarmas con la app cerrada, con el teléfono bloqueado y después de reiniciar el dispositivo.
-
 ## Verificación
 
 Las reglas de calendario y adherencia tienen pruebas en `app/src/test/java/com/example/gestionmedicamentos/ScheduleTest.kt`. En Android Studio se pueden ejecutar con **Run tests** o con `gradlew testDebugUnitTest`. Antes de una entrega también hay que compilar y probar manualmente navegación, modo local, cuenta Firebase, historial y alarmas.
